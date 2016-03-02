@@ -1,0 +1,3 @@
+﻿  AreaEmbaldosada.cpp
+c:\users\sergi\documents\visual studio 2015\projects\actividadextra3.4\actividadextra3.4\areaembaldosada.cpp(15): warning C4244: 'argument': conversion from 'double' to 'size_t', possible loss of data
+  ActividadExtra3.4.vcxproj -> c:\users\sergi\documents\visual studio 2015\Projects\ActividadExtra3.4\Debug\ActividadExtra3.4.exe
