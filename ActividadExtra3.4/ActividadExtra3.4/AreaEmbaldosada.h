@@ -15,11 +15,16 @@ public:
 	//divide la matriz entre 4 partes iguales.
 	//Usa el tamaño de la matriz para hacerlo.
 	void dividirMatriz();
+	//Comprueba la posicion de la casilla
+	void comprobarPosicionDelHueco();
+	int getPosicionDelHueco();
 	~AreaEmbaldosada();
 private:
 	int tamano;
 	int **baldosa;
 	int posicionDelHueco;
+	int valorX;
+	int valorY;
 };
 
 enum posicion

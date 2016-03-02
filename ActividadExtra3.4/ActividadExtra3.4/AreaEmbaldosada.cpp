@@ -35,13 +35,10 @@ void AreaEmbaldosada::imprimirMatriz()
 
 void AreaEmbaldosada::fijarCeldaProhibida()
 {
-	int valorX = rand() % this->tamano;
-	int valorY = rand() % this->tamano;
+	this->valorX = rand() % this->tamano;
+	this->valorY = rand() % this->tamano;
 
 	this->baldosa[valorX][valorY] = 0;
-
-	//si está arriba a la izquierda...
-	if(valorX > this->tamano / 2) 
 }
 
 void AreaEmbaldosada::insertarBaldosa()
@@ -65,9 +62,20 @@ void AreaEmbaldosada::insertarBaldosa()
 	}
 }
 
-void AreaEmbaldosada::dividirMatriz()
+void AreaEmbaldosada::comprobarPosicionDelHueco()
 {
+	//si está arriba a la izquierda... : 0
+	if (this->valorX < this->tamano / 2 && this->valorY < this->tamano / 2) posicionDelHueco = posicion::arribaIzquierda;
+	//Si está arriba a la derecha...   : 1
+	else if (this->valorX < this->tamano / 2 && this->valorY >= this->tamano / 2) posicionDelHueco = posicion::arribaDerecha;
+	//Si está abajo a la izquierda...  : 2
+	else if (this->valorX >= this->tamano / 2 && this->valorY < this->tamano / 2) posicionDelHueco = posicion::abajoIzquierda;
+	//si está abajo a la derecha...    : 3
+	else /*if (this->valorX >= this->tamano / 2 && this->valorY >= this->tamano / 2)*/ posicionDelHueco = posicion::abajoDerecha;
+}
 
+int AreaEmbaldosada::getPosicionDelHueco(){
+	return this->posicionDelHueco;
 }
 
 AreaEmbaldosada::~AreaEmbaldosada()
