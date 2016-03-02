@@ -41,20 +41,19 @@ void AreaEmbaldosada::fijarCeldaProhibida()
 	this->baldosa[valorX][valorY] = 0;
 }
 
-void AreaEmbaldosada::insertarBaldosa()
-{
+void AreaEmbaldosada::insertarBaldosa(){
 	switch (posicionDelHueco)
 	{
-	case arribaIzquierda:
+	case posicion::arribaIzquierda:
 
 		break;
-	case arribaDerecha:
+	case posicion::arribaDerecha:
 
 		break;
-	case abajoIzquierda:
+	case posicion::abajoIzquierda:
 
 		break;
-	case abajoDerecha:
+	case posicion::abajoDerecha:
 
 		break;
 	default:
@@ -78,6 +77,9 @@ int AreaEmbaldosada::getPosicionDelHueco(){
 	return this->posicionDelHueco;
 }
 
+
+
 AreaEmbaldosada::~AreaEmbaldosada()
 {
 }
+

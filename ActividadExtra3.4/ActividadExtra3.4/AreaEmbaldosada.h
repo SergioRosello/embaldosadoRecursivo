@@ -11,13 +11,15 @@ public:
 	//aleatorios y los voy a mapear en la matrizS
 	void fijarCeldaProhibida();
 	//Método que inserta baldosa en la matriz
+	//Vamos a generár un cuadrado y depende de la posicion de la casilla prohibida
+	//le vamos a quitar la casilla que esté dentro del cuadrante que contenga la
+	//la casilla prohibida.
 	void insertarBaldosa();
-	//divide la matriz entre 4 partes iguales.
-	//Usa el tamaño de la matriz para hacerlo.
-	void dividirMatriz();
 	//Comprueba la posicion de la casilla
 	void comprobarPosicionDelHueco();
 	int getPosicionDelHueco();
+
+
 	~AreaEmbaldosada();
 private:
 	int tamano;
@@ -25,6 +27,7 @@ private:
 	int posicionDelHueco;
 	int valorX;
 	int valorY;
+	static int numeroBaldosa;
 };
 
 enum posicion
